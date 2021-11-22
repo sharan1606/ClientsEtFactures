@@ -9,13 +9,14 @@ public class Facture
 	 * @return le client.
 	 */
 	private int montant;
+	private Client client;
 	
 	public Facture(int montant) {
 		this.montant = montant;
 	}
 	public Client getClient()
 	{
-		return null;
+		return client;
 	}
 
 	/**

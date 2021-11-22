@@ -10,6 +10,7 @@ public class Client
 	 * @param nom le nom du client. 
 	 */
 	private String nom;
+	private Facture facture;
 	
 	public Client(String nom)
 	{
@@ -55,7 +56,7 @@ public class Client
 
 	public List<Facture> getFactures()
 	{
-		return null;
+		return allfacture;
 	}
 	
 	/**

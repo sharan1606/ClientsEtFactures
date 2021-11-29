@@ -13,9 +13,10 @@ public class Facture
 	private boolean reglement=false;
 	private LocalDate date = LocalDate.now();
 	
-	public Facture(int montant) 
+	public Facture(int montant,Client client) 
 	{
-		this.montant = montant;
+		this.montant=montant;
+		this.client=client;
 	}
 	
 	public Client getClient()

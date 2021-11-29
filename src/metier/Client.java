@@ -5,60 +5,60 @@ import java.util.List;
 
 public class Client
 {
-	/** 
-	 * Crée un client.
-	 * @param nom le nom du client. 
-	 */
-	private String nom;
-	private Facture facture;
-	
-	public Client(String nom)
-	{
-		this.nom=nom;
-	}
+    private String nom;
+    private List<Facture> factures= new ArrayList<>();
+    /** 
+     * Crée un client.
+     * @param nom le nom du client. 
+     */
 
-	/**
-	 * Retourne le nom du client.
-	 * @return le nom du client.
-	 */
-	
-	public String getNom()
-	{
-		return nom;
-	}
-	
-	/**
-	 * Modifie le nom du client.
-	 * @param nom le nom du client.
-	 */
-	
-	public void setNom(String nom)
-	{
-		this.nom=nom;
-	}
-	
-	/**
-	 * Créé une facture.
-	 * @param montant Le montant de la facture.
-	 * @return la facture créée.
-	 */
-	
-	public Facture createFacture(int montant)
-	{
-		Facture facture = new Facture(montant);
-		return facture;
-	}
-	
-	/**
-	 * Retourne une copie de la liste des factures du client. 
-	 * @return une copie de la liste des factures du client.
-	 */
+    public Client(String nom)
+    {
+        this.nom = nom; 
+    }
 
-	public List<Facture> getFactures()
-	{
-		return null;
-	}
-	
+    /**
+     * Retourne le nom du client.
+     * @return le nom du client.
+     */
+
+    public String getNom()
+    {
+        return nom;
+    }
+
+    /**
+     * Modifie le nom du client.
+     * @param nom le nom du client.
+     */
+
+    public void setNom(String nom)
+    {
+        this.nom= nom;
+    }
+
+    /**
+     * Créé une facture.
+     * @param montant Le montant de la facture.
+     * @return la facture créée.
+     */
+
+    public Facture createFacture(int montant)
+    {
+        Facture facture = new Facture(montant,this);
+        factures.add(facture);
+        return facture;
+    }
+
+    /**
+     * Retourne une copie de la liste des factures du client. 
+     * @return une copie de la liste des factures du client.
+     */
+
+    public List<Facture> getFactures()
+    {
+        return this.factures;
+    }
 	/**
 	 * Retourne la somme des montants des factures.
 	 * @return la somme des montants des factures.
@@ -78,7 +78,7 @@ public class Client
 	
 	public Facture createFacture(int montant, boolean reglee)
 	{
-		return null;
+		return null ;
 	}	
 	
 	/**
@@ -107,5 +107,6 @@ public class Client
 	
 	public void delete()
 	{
+		nom = null ;
 	}
 }

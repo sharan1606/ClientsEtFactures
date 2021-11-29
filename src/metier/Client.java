@@ -57,7 +57,7 @@ public class Client
 
     public List<Facture> getFactures()
     {
-        return this.factures;
+    	return new ArrayList<Facture>(factures);
     }
 	/**
 	 * Retourne la somme des montants des factures.
@@ -66,7 +66,12 @@ public class Client
 	
 	public int sommeMontants()
 	{
-		return 0;
+		int sum = 0;
+		for(int i =0; i < factures.size(); i++)
+		{
+			sum = sum + factures.get(i).getMontant();
+		}
+		return sum;
 	}
 
 	/**

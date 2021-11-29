@@ -83,7 +83,7 @@ public class Client
 	
 	/**
 	 * Retourne la liste des factures reglées. 
-	 * @return la liste des factures reglées.
+	 * @return la liste des factures reglées.a
 	 */
 
 	public List<Facture> facturesReglees()

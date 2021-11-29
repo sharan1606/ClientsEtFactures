@@ -107,6 +107,5 @@ public class Client
 	
 	public void delete()
 	{
-		nom = null ;
 	}
 }

@@ -43,14 +43,14 @@ public class Client
      * @param montant Le montant de la facture.
      * @return la facture créée.
      */
-
+/**
     public Facture createFacture(int montant)
     {
         Facture facture = new Facture(montant,this);
         factures.add(facture);
         return facture;
     }
-
+*/
     /**
      * Retourne une copie de la liste des factures du client. 
      * @return une copie de la liste des factures du client.
